@@ -7,7 +7,7 @@ class CreatePaths < ActiveRecord::Migration
       t.text :description
       t.time :duration
       t.integer :likes
-      t.integer :status
+      t.integer :status, default: 1
 
       t.timestamps null: false
     end

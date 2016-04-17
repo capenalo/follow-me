@@ -1,4 +1,5 @@
 class PathsController < ApplicationController
+  before_action :set_statuses
   before_action :set_path, only: [:show, :edit, :update, :destroy]
 
   # GET /paths
@@ -70,5 +71,9 @@ class PathsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def path_params
       params.require(:path).permit(:name, :country, :city, :description, :duration, :likes, :status)
+    end
+    
+    def set_statuses
+      @statuses = Path.statuses
     end
 end
