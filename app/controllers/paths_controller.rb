@@ -1,4 +1,5 @@
 class PathsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_statuses
   before_action :set_path, only: [:show, :edit, :update, :destroy]
 

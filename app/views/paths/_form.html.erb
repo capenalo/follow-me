@@ -37,8 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.select :status, options_for_select(@statuses.collect {|s| [s[0].humanize, s[0]]},
-    selected: @path.status), {} %>
+    <%= f.select :status, options_for_select(@statuses.collect {|s| [s[0].humanize, s[0]]}, selected: @path.status), {} %>
   </div>
   <div class="actions">
     <%= f.submit %>
